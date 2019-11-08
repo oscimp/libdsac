@@ -1,4 +1,3 @@
-
 /*-------------------------------------------------------------------------*/
 /**
   @file     gnuplot_i.h
@@ -22,8 +21,12 @@
     $Revision: 1.11 $
  */
 
-#ifndef _GNUPLOT_PIPES_H_
-#define _GNUPLOT_PIPES_H_
+#ifndef DSAC_GNUPLOT_PIPES_H
+#define DSAC_GNUPLOT_PIPES_H
+
+#ifdef __cplusplus /* if C++, specify external linkage to C functions */
+extern "C" {
+#endif
 
 /*---------------------------------------------------------------------------
                                 Includes
@@ -415,4 +418,8 @@ int gnuplot_write_multi_csv(
     int                 numColumns,
     char const      *   title);
 
+#ifdef __cplusplus
+{
 #endif
+
+#endif // DSAC_GNUPLOT_PIPES_H

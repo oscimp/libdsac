@@ -1,5 +1,12 @@
-#ifndef _FAKE_SIGNALS_H
-#define _FAKE_SIGNALS_H
+/*!
+ * \file fake_signals.h
+ * \brief Description courte...
+
+ * Description longue...
+ */
+
+#ifndef DSAC_FAKE_SIGNALS_H
+#define DSAC_FAKE_SIGNALS_H
 
 #include <stdlib.h>
 #include <stdint.h>
@@ -20,5 +27,4 @@ void create_fake_adc_signal_with_noise(double * xtt , double phi_offset , double
 }
 #endif
 
-#endif // _FAKE_SIGNALS_H
-
+#endif // DSAC_FAKE_SIGNALS_H

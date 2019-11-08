@@ -1,5 +1,16 @@
-#ifndef _FFT_H
-#define _FFT_H
+/*!
+ * \file fft.h
+ * \brief Description courte...
+
+ * Description longue...
+ */
+
+#ifndef DSAC_FFT_H
+#define DSAC_FFT_H
+
+#ifdef __cplusplus /* if C++, specify external linkage to C functions */
+extern "C" {
+#endif
 
 #include <stdint.h>
 
@@ -28,11 +39,16 @@
 #endif
 
 //void fft_accum(int m_index, int64_t x_re, int64_t x_im);
-void fft_compute(int64_t *x_re, int64_t *x_im, 
-	int64_t *out_re, int64_t *out_im, int n_fft, 
+void fft_compute(int64_t *x_re, int64_t *x_im,
+	int64_t *out_re, int64_t *out_im, int n_fft,
 	int64_t * cosLUT, int64_t * sinLUT, int scale_factor, int nb_elem);
 void fft_compute_coeff(int64_t *coeffReal, int64_t *coeffImag,
 	int scaleFactor, int nb_elem);
 //int64_t getValRe(int m_index);
 //int64_t getValIm(int m_index);
-#endif // _FFT_H
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif // DSAC_FFT_H

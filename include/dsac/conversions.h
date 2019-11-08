@@ -1,8 +1,12 @@
-#ifndef _CONVERSIONS_H
-#define _CONVERSIONS_H
+/*!
+ * \file conversions.h
+ * \brief Description courte...
 
-#include <stdlib.h>
-#include <math.h>
+ * Description longue...
+ */
+
+#ifndef DSAC_CONVERSIONS_H
+#define DSAC_CONVERSIONS_H
 
 #ifdef __cplusplus /* if C++, specify external linkage to C functions */
 extern "C" {
@@ -11,13 +15,10 @@ extern "C" {
 /*!
 * \brief Various electrical conversions
 */
-
 double dbm2vp(double x);
-
 
 #ifdef __cplusplus
 }
 #endif
 
-#endif // _CONVERSIONS_H
-
+#endif // DSAC_CONVERSIONS_H

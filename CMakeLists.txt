@@ -40,6 +40,14 @@ else()
   message(STATUS "OpenMP disable")
 endif()
 
+# Documentation
+find_package(Doxygen)
+
+if(DOXYGEN_FOUND)
+  configure_file("${CMAKE_SOURCE_DIR}/Doxyfile.cmake" "${CMAKE_BINARY_DIR}/Doxyfile" @ONLY)
+  add_custom_target(doc ${DOXYGEN_EXECUTABLE} "${CMAKE_BINARY_DIR}/Doxyfile")
+endif(DOXYGEN_FOUND)
+
 # Depends
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/modules")
 find_package(FFTW3 REQUIRED)

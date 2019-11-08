@@ -1,5 +1,8 @@
 #include "conversions.h"
 
+#include <stdlib.h>
+#include <math.h>
+
 double dbm2vp(double x){
         /*sqrt(50.0*10^(-3+0.1*x))*sqrt(2);*/
 

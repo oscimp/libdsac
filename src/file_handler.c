@@ -1,9 +1,10 @@
+#include "file_handler.h"
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
 #include <string.h>
 #include <errno.h>
-#include "fileHandler.h"
 
 int storeComplex64Bits(char *filename, int dataSize, long long *dataI, long long *dataQ)
 {
@@ -79,7 +80,7 @@ int storeDouble(char  * filename , int dataSize , double * data){
 
         fflush(fd);
         fclose(fd);
-	
+
 	printf("stored: %s\n",filename);
 
         return EXIT_SUCCESS;
@@ -102,7 +103,7 @@ int storeInt64(char  * filename , int64_t * data , unsigned long dataSize){
 
         fflush(fd);
         fclose(fd);
-	
+
 	printf("stored: %s\n",filename);
 
         return EXIT_SUCCESS;
@@ -126,7 +127,7 @@ int store8Int64(char  * filename , int64_t * a , int64_t * b, int64_t * c, int64
 
         fflush(fd);
         fclose(fd);
-	
+
 	printf("stored: %s\n",filename);
 
         return EXIT_SUCCESS;
@@ -150,7 +151,7 @@ int store8Int32(char  * filename , int32_t * a , int32_t * b, int32_t * c, int32
 
         fflush(fd);
         fclose(fd);
-	
+
 	printf("stored: %s\n",filename);
 
         return EXIT_SUCCESS;
@@ -174,7 +175,7 @@ int store8Int32fromDouble(char  * filename , double * a , double * b, double * c
 
         fflush(fd);
         fclose(fd);
-	
+
 	printf("stored: %s\n",filename);
 
         return EXIT_SUCCESS;
@@ -233,8 +234,8 @@ int readDataInt64to4int16d(char * filename, long nb_elements, double *adc1, doub
 
                 adc1[i] = (int16_t)(0xffff&(ch12));
                 adc2[i] = (int16_t)(0xffff&(ch12>>16));
-		adc3[i] = (int16_t)(0xffff&(ch34)); 
-		adc4[i] = (int16_t)(0xffff&(ch34>>16)); 
+		adc3[i] = (int16_t)(0xffff&(ch34));
+		adc4[i] = (int16_t)(0xffff&(ch34>>16));
         }
 
         fclose(fd);

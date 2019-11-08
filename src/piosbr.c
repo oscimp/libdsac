@@ -1,4 +1,12 @@
 #include "piosbr.h"
+
+#include <stdlib.h>
+#include <stdio.h>
+#include <unistd.h>		//pour optarg
+#include <string.h>
+#include <math.h>
+#include <errno.h>
+
 double * allocate_double(int size){
 double *vec=(double *)malloc(sizeof(double) * size);
         if (vec == NULL) {

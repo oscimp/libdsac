@@ -3,22 +3,23 @@ include_directories("${CMAKE_CURRENT_SOURCE_DIR}/../include/dsac")
 
 # Create library dynamic
 add_library(dsac SHARED
-  crossspectrum.c
-  fir.c
-  fft.c
+  conversions.c
   cordic.c
-  fileHandler.c
+  crossspectrum.c
+  fake_signals.c
+  fft.c
+  file_handler.c
+  fir.c
   gnuplot_i.c
+  linspace.c
+  logalizit.c
+  logspace.c
   nco.c
   piosbr_mod.c
+  # piosbr.c
   reg_lin.c
-  tf.c
   t_pnm.c
-  linspace.c
-  logspace.c
-  logalizit.c
-  conversions.c
-  fake_signals.c
+  tf.c
 )
 
 set_target_properties(dsac

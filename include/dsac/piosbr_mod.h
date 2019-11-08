@@ -1,9 +1,17 @@
-#include <stdlib.h>
-#include <stdio.h>
-#include <unistd.h>		//pour optarg
-#include <string.h>
-#include <math.h>
-#include <errno.h>
+/*!
+ * \file piosbr_mod.h
+ * \brief Description courte...
+
+ * Description longue...
+ */
+
+
+#ifndef DSAC_PIOSBR_MOD_H
+#define DSAC_PIOSBR_MOD_H
+
+#ifdef __cplusplus /* if C++, specify external linkage to C functions */
+extern "C" {
+#endif
 
 double * allocate_double(int size);
 void dprint(double *vec, int size, char *buf);
@@ -18,3 +26,9 @@ void show(double *x, int n, char *buf);
 
 void gplot(double *f_log, char *format_f, double *p_log, char *format_p, int n,
 	   char *logmode, char *title);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif // DSAC_PIOSBR_MOD_H

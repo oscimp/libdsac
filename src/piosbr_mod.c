@@ -1,4 +1,12 @@
 #include "piosbr_mod.h"
+
+#include <stdlib.h>
+#include <stdio.h>
+#include <unistd.h>		//pour optarg
+#include <string.h>
+#include <math.h>
+#include <errno.h>
+
 /*exit: marche pas pour test unitaire (return NULL;) mais l'utilisateur doit tester la fonction (if) */
 double * allocate_double(int size){
 double *vec=(double *)calloc(size, sizeof(double));

@@ -1,7 +1,16 @@
-#ifndef _FIR_H
-#define _FIR_H
+/*!
+ * \file fir.h
+ * \brief Description courte...
 
-#include <stdlib.h>
+ * Description longue...
+ */
+
+
+#ifndef DSAC_FIR_H
+#define DSAC_FIR_H
+
+#include <stddef.h>
+#include <stdint.h>
 
 #ifdef __cplusplus /* if C++, specify external linkage to C functions */
 extern "C" {
@@ -89,5 +98,4 @@ void fird(double *coeff, double *x,  int coeff_size, long data_size,
 }
 #endif
 
-#endif // _FIR_H
-
+#endif // DSAC_FIR_H

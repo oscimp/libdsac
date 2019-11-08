@@ -1,5 +1,13 @@
-#ifndef __NCO_H
-#define __NCO_H
+/*!
+ * \file nco.h
+ * \brief Description courte...
+
+ * Description longue...
+ */
+
+
+#ifndef DSAC_NCO_H
+#define DSAC_NCO_H
 
 #ifdef __cplusplus /* if C++, specify external linkage to C functions */
 extern "C" {
@@ -25,8 +33,6 @@ short *createNCOLutShort(long nb, int DATA_SIZE);
 * \param out_sin: array containing sin out values
 * \param nb_output_elem: arrays length
 */
-
-
 uint32_t NCOgenFreq(long freq_ref, long freq_out,
         int phase_accum_size, uint32_t start_value,
         short *nco_tab, int addr_size,
@@ -36,4 +42,4 @@ uint32_t NCOgenFreq(long freq_ref, long freq_out,
 }
 #endif
 
-#endif /* __NCO_H */
+#endif // DSAC_NCO_H

@@ -1,3 +1,18 @@
+/*!
+ * \file tf.h
+ * \brief Description courte...
+
+ * Description longue...
+ */
+
+
+#ifndef DSAC_TF_H
+#define DSAC_TF_H
+
+#ifdef __cplusplus /* if C++, specify external linkage to C functions */
+extern "C" {
+#endif
+
 #include <stdlib.h>
 #include <stdio.h>
 #include <unistd.h>		//pour optarg
@@ -25,3 +40,9 @@ void calc_IQ(double *x, double *cosine, double *sine, double *rawI,
              double *rawQ, int taille);
 
 //void fft(double *in, double *out, int N);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif // DSAC_TF_H

@@ -1,11 +1,18 @@
-#ifndef _CROSSSPECTRUM_H
-#define _CROSSSPECTRUM_H
+/*!
+ * \file crossspectrum.h
+ * \brief Description courte...
 
-#include <stdlib.h>
+ * Description longue...
+ */
+
+#ifndef DSAC_CROSSSPECTRUM_H
+#define DSAC_CROSSSPECTRUM_H
 
 #ifdef __cplusplus /* if C++, specify external linkage to C functions */
 extern "C" {
 #endif
+
+#include <stddef.h>
 
 /*!
  * \brief Cross spectrum
@@ -25,5 +32,4 @@ void cross_spectrum(const double * const chanel_a[], const double * const chanel
 }
 #endif
 
-#endif // _CROSSSPECTRUM_H
-
+#endif // DSAC_CROSSSPECTRUM_H

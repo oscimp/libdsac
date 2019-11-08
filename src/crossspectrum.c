@@ -1,9 +1,5 @@
 #include "crossspectrum.h"
 
-#include <stdlib.h>
-
-#include <fftw3.h>
-
 void cross_spectrum(const double * const chanel_a[], const double * const chanel_b[], double cross_spectrum[], const size_t nb_elements)
 {
 	unsigned int y = 0;

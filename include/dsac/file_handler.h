@@ -1,5 +1,18 @@
-#ifndef __FILE_HANDLER__
-#define __FILE_HANDLER__ 
+/*!
+ * \file file_handler.h
+ * \brief Description courte...
+
+ * Description longue...
+ */
+
+#ifndef DSAC_FILE_HANDLER_H
+#define DSAC_FILE_HANDLER_H
+
+#ifdef __cplusplus /* if C++, specify external linkage to C functions */
+extern "C" {
+#endif
+
+#include <stdint.h>
 
 int readContent(short *tab, char *filename2, long nb, int offset);
 int storeComplex64Bits(char *filename, int dataSize, long long *dataI, long long *dataQ);
@@ -12,4 +25,8 @@ int store8Int32fromDouble(char  * filename , double * a , double * b, double * c
 int readDataInt32to2int16d(char * filename, long nb_elements, double *adc1, double *adc2);
 int readDataInt64to4int16d(char * filename, long nb_elements, double *adc1, double *adc2 , double *adc3, double *adc4);
 
-#endif /* __FILE_HANDLER__ */
+#ifdef __cplusplus
+}
+#endif
+
+#endif // DSAC_FILE_HANDLER_H

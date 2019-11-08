@@ -1,5 +1,16 @@
-#ifndef __CORDIC_H
-#define __CORDIC_H
+/*!
+ * \file cordic.h
+ * \brief Description courte...
+
+ * Description longue...
+ */
+
+#ifndef DSAC_CORDIC_H
+#define DSAC_CORDIC_H
+
+#ifdef __cplusplus /* if C++, specify external linkage to C functions */
+extern "C" {
+#endif
 
 long computeCordic(long x, long y, int iter, int *atanLut);
 void computeAtanLut(int size, int *atanLut, int scaleFactor);
@@ -15,4 +26,9 @@ double correctDouble(double value, double x, double y);
 float correctF(float value, float x, float y);
 long correctL(long value, float x, float y, int scaleFactor);
 long long correctLL(long long value, long long x, long long y, long long scaleFactor);
-#endif /* __CORDIC_H */
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif // DSAC_CORDIC_H

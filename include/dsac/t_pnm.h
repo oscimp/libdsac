@@ -1,15 +1,20 @@
-#ifndef _T_PNM_H
-#define _T_PNM_H
+/*!
+ * \file t_pnm.h
+ * \brief Description courte...
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <math.h>
-#include <fftw3.h>
-#include "gnuplot_i.h"
+ * Description longue...
+ */
+
+
+#ifndef DSAC_T_PNM_H
+#define DSAC_T_PNM_H
 
 #ifdef __cplusplus /* if C++, specify external linkage to C functions */
 extern "C" {
 #endif
+
+#include <stdint.h>
+#include <math.h>
 
 #define PI 3.1415926535897932384626433832795
 #define M_2PI 2.0f*M_PI
@@ -91,4 +96,4 @@ double vector_max(double * v , const unsigned long size);
 }
 #endif
 
-#endif // _T_PNM_H
+#endif // DSAC_T_PNM_H

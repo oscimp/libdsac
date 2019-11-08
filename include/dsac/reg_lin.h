@@ -1,5 +1,13 @@
-#ifndef H_REG_LIN_H
-#define H_REG_LIN_H
+/*!
+ * \file reg_lin.h
+ * \brief Description courte...
+
+ * Description longue...
+ */
+
+
+#ifndef DSAC_REG_LIN_H
+#define DSAC_REG_LIN_H
 
 #ifdef __cplusplus /* if C++, specify external linkage to C functions */
 extern "C" {
@@ -17,4 +25,4 @@ void reg_lin(double *a, double *b, const double y[], const double x_moins_x_barr
 }
 #endif
 
-#endif // H_REG_LIN_H
+#endif // DSAC_REG_LIN_H

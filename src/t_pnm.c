@@ -1,12 +1,12 @@
 #include "t_pnm.h"
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <fftw3.h>
+
+#include "gnuplot_i.h"
 #include "piosbr_mod.h"
-#include "fileHandler.h"
-
-
-
-
-
-
+#include "file_handler.h"
 
 double constrainAngle(double x)
 {
@@ -912,7 +912,7 @@ void normalize_psd_dBc(  double * Cospctl , const int win_size , const double fs
 	double hann_norm = 1.7609125905568124;
 	double freq_bin_norm = 10.0 * log10(fs/(double)win_size);
 	double PS=0.0;
-	
+
         for (k=0 ; k<win_size/2 ; k++){
 		PS = 2.0 * 2.0 * 2.0 * fabs(Cospctl[k] / (  pow(win_size,2)));
 		psd[k] = 10.0*log10(PS) - hann_norm - freq_bin_norm;
@@ -925,7 +925,7 @@ void normalize_psd_dBc(  double * Cospctl , const int win_size , const double fs
 void powerSpectralDensity0 (  double * armx , double * army , const int win_size , const double fs , double * psd)
 {
 	int k=0;
-	//not for  the moment, may  induce NaN 
+	//not for  the moment, may  induce NaN
 	/* hann_norm = 10.0 * log10(1.5) */
 	double hann_norm = 1.7609125905568124;
 	double freq_bin_norm = 10.0 * log10(fs/(double)win_size);
@@ -1325,7 +1325,7 @@ double mean(double * vec , unsigned long size){
 void remove_mean(double * vec , unsigned long size){
 
 	double mean_vec = mean(vec,size);
-	
+
 	unsigned long k;
 
 	for ( k = 0 ; k < size ; k++ ) {
@@ -1336,7 +1336,7 @@ void remove_mean(double * vec , unsigned long size){
 
 
 double vector_max(double * v , const unsigned long size){
-	
+
 	unsigned long k;
 	double max=.0;
 
