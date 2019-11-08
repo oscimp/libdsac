@@ -14,7 +14,7 @@ Quick compilation
 To compile:
 
 ```sh
-git clone https://lxsd.femto-st.fr/gitlab/ahugeat/libdsac.git
+git clone https://github.com/oscimp/libdsac.git
 cd libdsac
 mkdir build
 cd build
